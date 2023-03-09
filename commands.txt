@@ -7,3 +7,6 @@ ansible all --list-hosts
 ansible all -m gather_facts
 ansible all -m gather_facts -u ubuntu
 ansible all -m gather_facts --limit 192.168.128.202
+
+ansible-playbook --ask-become-pass install_apache.yml
+ansible-playbook --ask-become-pass remove_apache.yml

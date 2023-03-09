@@ -1,0 +1,24 @@
+---
+
+- hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+
+
+  - name: update servers
+    ansible.builtin.apt:
+      update_cache: yes
+
+
+
+  - name: upgrade servers
+    ansible.builtin.apt:
+      upgrade: yes
+
+
+
+  - name: autoremove packages on  servers
+    ansible.builtin.apt:
+      autoremove: yes
+
